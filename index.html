@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div id="root">
+
+	</div>
+	<button onclick="add_to_list()">Add to your list</button>
+	<button onclick="clear_all()">Clear all</button>
+<!-- 	<button onclick="new_item()">New item</button>
+-->	<script>
+
+	let div = document.getElementById("root");
+	var heading = document.createElement("h1");
+	heading.innerText = "Shopping List"
+	div.appendChild(heading);
+
+	let main_div = document.getElementById("root");
+	let user_input = document.createElement("input");
+	div.appendChild(user_input);
+
+	// console.log(user_input)
+
+	var main_list = [];
+
+
+	const add_to_list = () => {
+		var div = document.getElementById("root");
+		var list = document.createElement("li");
+			list.innerText = user_input.value // will add this text in paragraph
+			div.appendChild(list);
+			// console.log(list);
+			return list;
+		}
+
+		// console.log(list);
+
+
+		const clear_all = () => {
+			let empty_list = document.getElementsByTagName("li");
+			// console.log(empty_list)
+			let len = empty_list.length;
+			for ( let i = 0; i < len; i++) {
+				if (empty_list != 0){ 
+				empty_list[0].remove();
+				}
+			}
+		}
+
+		
+
+	</script>
+</body>
+</html>
